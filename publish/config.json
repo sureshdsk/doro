@@ -1,0 +1,12 @@
+{
+  "author": "sureshdsk",
+  "package_name_override": "doro",
+  "email": "dsk@idiotinside.com",
+  "description": "CLI based pomodoro app",
+  "url": "https://github.com/sureshdsk/pymodoro",
+  "python_version": "3.7",
+  "version": "0.0.1",
+  "scripts": [
+    "doro = app:app"
+  ]
+}

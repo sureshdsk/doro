@@ -1,0 +1,4 @@
+pyglet==1.5.19
+PyYAML==5.4.1
+rich==10.7.0
+typer==0.3.2
