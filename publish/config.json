@@ -5,7 +5,7 @@
   "description": "CLI based pomodoro app",
   "url": "https://github.com/sureshdsk/pymodoro",
   "python_version": "3.7",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "scripts": [
     "doro = app:app"
   ]
