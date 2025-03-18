@@ -29,8 +29,7 @@ class Pomodoro:
     @property
     def music(self):
         _music = pyglet.media.load(
-            f"{pathlib.Path(__file__).parent.resolve()}"
-            f"/sounds/{self.sound_title}.wav",
+            f"{pathlib.Path(__file__).parent.resolve()}/sounds/{self.sound_title}.wav",
             streaming=True,
         )
         return _music

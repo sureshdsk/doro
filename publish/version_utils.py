@@ -5,7 +5,6 @@ import os
 
 
 def bump_version(config_file: str) -> str:
-
     # Open the file and read the version.
     with open(config_file, "r") as f:
         config_object = json.load(f)
