@@ -1,11 +1,8 @@
 import typer
 from rich.prompt import Prompt
 
-from .config import dump_config
-from .config import get_config
-from .constants import BREAK_MINUTES
-from .constants import FOCUS_MINUTES
-from .constants import TERMINAL_COLORS
+from .config import dump_config, get_config
+from .constants import BREAK_MINUTES, FOCUS_MINUTES, TERMINAL_COLORS
 from .pomodoro import Pomodoro
 
 app = typer.Typer()

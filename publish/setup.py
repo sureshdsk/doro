@@ -3,8 +3,7 @@ import json
 import os
 
 import setuptools
-from version_utils import bump_version
-from version_utils import copy_version_to_package
+from version_utils import bump_version, copy_version_to_package
 
 # ======================================================================================================================
 # Fill in this information for each package.

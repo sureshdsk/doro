@@ -1,0 +1,19 @@
+[project]
+name = "doro"
+version = "0.1.0"
+description = "CLI based pomodoro app"
+readme = "README.md"
+requires-python = ">=3.12.8"
+dependencies = [
+    "pyglet==1.5.19",
+    "pyyaml==6.0.2",
+    "rich==10.9.0",
+    "typer==0.3.2",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.1.0",
+    "pytest>=8.3.5",
+]
+
