@@ -1,6 +1,5 @@
 [project]
 name = "doro"
-version = "0.1.0"
 description = "CLI based pomodoro app"
 readme = "README.md"
 authors = [
@@ -13,6 +12,9 @@ dependencies = [
     "rich==10.9.0",
     "typer==0.3.2",
 ]
+dynamic = [
+    "version"
+]
 
 [build-system]
 requires = ["hatchling"]
@@ -20,6 +22,9 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/app"]
+
+[tool.hatch.version]
+path = "src/app/__version__.py"
 
 [tool.hatch.build]
 include = [
