@@ -1,4 +1,5 @@
 pyglet==1.5.19
 PyYAML==6.0.2
-rich==10.9.0
-typer==0.3.2
+rich==13.9.4
+typer==0.15.2
+mitmproxy
