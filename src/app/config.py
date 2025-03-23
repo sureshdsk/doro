@@ -19,6 +19,7 @@ class RuntimeConfig:
     focus_minutes: str = "15"
     break_minutes: str = "5"
     terminal_color: str = "magenta"
+    block_social_media: bool = False
 
 
 def dump_config(config: Dict):

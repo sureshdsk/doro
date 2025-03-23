@@ -1,11 +1,13 @@
 import typer
 from rich.prompt import Prompt
+from rich.console import Console
 
 from .config import dump_config, get_config
 from .constants import BREAK_MINUTES, FOCUS_MINUTES, TERMINAL_COLORS
 from .pomodoro import Pomodoro
 
 app = typer.Typer()
+console = Console()
 
 
 @app.command()
@@ -25,15 +27,24 @@ def config():
         choices=TERMINAL_COLORS,
         default="magenta",
     )
+    block_social = Prompt.ask(
+        "Block social media during focus time? ",
+        choices=["yes", "no"],
+        default="yes",
+    )
+    
+    block_social_media = block_social.lower() == "yes"
 
     config = {
         "doro": {
             "focus_minutes": duration,
             "break_minutes": break_minutes,
             "terminal_color": terminal_color,
+            "block_social_media": block_social_media,
         },
     }
     dump_config(config)
+    console.print("Configuration saved successfully!")
 
 
 @app.command()

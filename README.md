@@ -36,3 +36,18 @@ $ doro countdown 90
 ## Demo
 ![pomodoro-demo](https://raw.githubusercontent.com/sureshdsk/doro/main/screenshots/doro-demo.gif?raw=true)
 ![countdown-demo](https://raw.githubusercontent.com/sureshdsk/doro/main/screenshots/doro-demo2.gif?raw=true)
+
+
+## Development
+```
+$ uv venv --python=3.12
+$ source .venv/bin/activate
+
+$ uv build
+Successfully built dist/doro-X.X.X.tar.gz
+Successfully built dist/doro-X.X.X-py3-none-any.whl 
+
+$ pip install dist/doro-0.0.4-py3-none-any.whl --force
+
+$ doro --help
+```
