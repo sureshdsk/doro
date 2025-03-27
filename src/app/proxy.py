@@ -9,7 +9,7 @@ import time
 from typing import List, Dict, Any, Optional
 
 # Configure logging
-log_dir = os.path.join(os.getenv("HOME"), ".doro_logs")
+log_dir = os.path.join(Path.home(), ".doro_logs")
 os.makedirs(log_dir, exist_ok=True)
 log_file = os.path.join(log_dir, f"social_media_blocks_{datetime.now().strftime('%Y%m%d')}.log")
 
@@ -76,7 +76,7 @@ def request(flow):
 
 def create_mitm_script():
     """Create a temporary script file for mitmproxy"""
-    script_dir = os.path.join(os.getenv("HOME"), ".doro_scripts")
+    script_dir = os.path.join(Path.home(), ".doro_scripts")
     os.makedirs(script_dir, exist_ok=True)
     script_path = os.path.join(script_dir, "social_media_blocker.py")
     

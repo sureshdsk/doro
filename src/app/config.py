@@ -11,7 +11,7 @@ try:
 except ImportError:
     from yaml import Dumper, Loader
 
-CONFIG_PATH = os.path.join(os.getenv("HOME"), ".doro.yaml")
+CONFIG_PATH = os.path.join(Path.home(), ".doro.yaml") if os.name == 'nt'  else os.path.join(os.getenv("HOME"), ".doro.yaml")
 
 
 @dataclass()
