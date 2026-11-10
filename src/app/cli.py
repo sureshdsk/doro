@@ -56,6 +56,9 @@ def start():
 
 @app.command()
 def countdown(minutes: int = typer.Argument(15)):
+    if minutes < 1:
+        typer.echo("Error: minutes must be at least 1.", err=True)
+        raise typer.Exit(code=1)
     config = get_config()
     config.focus_minutes = minutes
     session = Pomodoro(config)
